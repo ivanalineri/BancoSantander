@@ -5,15 +5,17 @@ public class ContaPoupanca extends Contas {
     private float taxaDeJuros;
 
     public float getTaxaDeJuros() {
+
         return taxaDeJuros;
     }
 
     public void setTaxaDeJuros(float novaTaxaDeJuros) {
         taxaDeJuros = novaTaxaDeJuros;
-        taxaDeJuros = 13;
+
     }
 
-    public void recolherJuros(){
+    public void recolherJuros(Clientes clientes) {
+
 
     }
 
@@ -23,14 +25,19 @@ public class ContaPoupanca extends Contas {
     }
 
     @Override
-    public void deposito(Clientes clientes) {
-        super.deposito(clientes, "2590");
+    public void deposito(Clientes clientes, String quantidadeDeDinheiro) {
     }
 
     @Override
-    public void sacar(Clientes clientes) {
-        super.sacar(clientes, "50");
-
+    public void sacar(Clientes clientes, String saldo) {
+        super.sacar(clientes, saldo);
     }
+
+
+    public ContaPoupanca(Clientes clientes, float novaTaxaDeJuros) {
+        taxaDeJuros = novaTaxaDeJuros;
+    }
+
+
 }
 

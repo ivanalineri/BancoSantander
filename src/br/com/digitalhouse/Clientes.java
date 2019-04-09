@@ -7,18 +7,22 @@ public class Clientes {
     private String cpf;
 
     public float getNumeroDoCliente() {
+
         return numeroDoCliente;
     }
 
     public void setNumeroDoCliente(float numeroDoCliente) {
+
         this.numeroDoCliente = numeroDoCliente;
     }
 
     public String getSobreNome() {
+
         return sobreNome;
     }
 
     public void setSobreNome(String sobreNome) {
+
         this.sobreNome = sobreNome;
     }
 
@@ -27,14 +31,17 @@ public class Clientes {
     }
 
     public void setRg(String rg) {
+
         this.rg = rg;
     }
 
     public String getCpf() {
+
         return cpf;
     }
 
     public void setCpf(String cpf) {
+
         this.cpf = cpf;
     }
 

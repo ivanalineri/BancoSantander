@@ -1,24 +1,24 @@
 package br.com.digitalhouse;
 
 public class Principal {
+
     public static void main(String[] args) {
-       Clientes clientes  = new Clientes(2435,"Crezes", "44356546", "2312344");
-       Cheque cheque = new Cheque(250, "Itau", "23/04/2019");
-       Contas contaCorrente1 = new ContaCorrente();
-       Contas contapoupanca1 = new ContaPoupanca();
 
-        contaCorrente1.deposito(clientes,"800");
-        contaCorrente1.sacar(clientes, "20");
-        contapoupanca1.deposito(clientes);
-        contapoupanca1.sacar(clientes, "50");
-        ((ContaPoupanca) contapoupanca1).recolherJuros();
-        cheque.setValor(500);
+        Clientes clientes = new Clientes(1234,"Jeremias","1234524", "12378930");
+        Contas contas = new ContaPoupanca(clientes, 12);
+        Contas contas1 = new ContaCorrente(clientes);
+        Cheque cheque = new Cheque(300,"Itau","23/09/2019");
+        // poupança pode: depositar dinheiro, sacar dinheiro, recolher juros
+        //corrente pode: depositar dinheiro, depositar cheque, sacar dinheiro.
+        contas.deposito(clientes,"200");
+        contas.sacar(clientes, "200");
+        contas1.deposito(clientes, "300");
+        contas1.depositoCheque(clientes,cheque);
+        contas1.sacar(clientes, "100");
+        contas.consultarSaldo(clientes);
+        contas1.consultarSaldo(clientes);
 
-        System.out.println("Saque realizado pelo Banco Santader pelo cliente: " + clientes.toString());
-
-
-
-
+        System.out.println(clientes);
 
     }
 

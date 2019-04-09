@@ -6,32 +6,38 @@ public class Cheque {
     private String data;
 
     public float getValor() {
+
         return valor;
     }
 
-    public void setValor(float valor) {
-        this.valor = valor;
+    public void setValor(float novoValor) {
+
+        valor = novoValor;
     }
 
     public String getBancoEmissor() {
+
         return bancoEmissor;
     }
 
-    public void setBancoEmissor(String bancoEmissor) {
-        this.bancoEmissor = bancoEmissor;
+    public void setBancoEmissor(String novoBancoEmissor) {
+
+        bancoEmissor = novoBancoEmissor;
     }
 
     public String getData() {
+
         return data;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setData(String novaData) {
+
+        data = novaData;
     }
 
-    public Cheque(float valor, String bancoEmissor, String data) {
-        this.valor = valor;
-        this.bancoEmissor = bancoEmissor;
-        this.data = data;
+    public Cheque(float novoValor, String novoBancoEmissor, String novaData) {
+        valor = novoValor;
+        bancoEmissor = novoBancoEmissor;
+        data = novaData;
     }
 }
